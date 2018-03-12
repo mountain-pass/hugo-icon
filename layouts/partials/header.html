@@ -6,10 +6,10 @@
 	 <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
 	 <meta name="author" content="FREEHTML5.CO / Hugo port " />
  -->
-{{ with .Site.Author }}<meta name="author" content="{{ . }}">{{ end }}
-{{ if .Site.Description }}
-<meta name="description" content="{{ .Site.Description }}">
-<meta property="og:description" content="{{ .Site.Description }}">
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with .Site.Params.description }}
+<meta name="description" content="{{ . }}">
+<meta property="og:description" content="{{ . }}">
 {{ end }}
 {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
 
