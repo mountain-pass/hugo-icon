@@ -34,11 +34,11 @@
 <meta name="twitter:card" content="" />
 {{ end }}
 
-{{ if .Site.Image }}
-<meta property="og:image" content="{{ .Site.Image }}">
+{{ with .Site.Params.image }}
+<meta property="og:image" content="{{ . }}">
 {{ end }}
-{{ if .Site.Color }}
-<meta name="theme-color" content="{{ .Site.Color }}">
+{{ with .Site.Params.color }}
+<meta name="theme-color" content="{{ . }}">
 {{ end }}
 
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
