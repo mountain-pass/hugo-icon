@@ -6,8 +6,11 @@
 	 <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
 	 <meta name="author" content="FREEHTML5.CO / Hugo port " />
  -->
-{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with .Site.description }}
+<meta name="description" content="{{ . }}">
+<meta property="og:description" content="{{ . }}">
+{{ end }}
 {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
 
 <!-- FREE HTML5 TEMPLATE  -->
@@ -31,6 +34,13 @@
 <meta name="twitter:card" content="" />
 {{ end }}
 
+{{ if .Site.Image }}
+<meta property="og:image" content="{{ .Site.Image }}">
+{{ end }}
+{{ if .Site.Color }}
+<meta name="theme-color" content="{{ .Site.Color }}">
+{{ end }}
+
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 <!-- <link rel="shortcut icon" href="favicon.ico"> -->
     
@@ -46,3 +56,8 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Firebase -->
+{{ if .Site.Firebase }}
+{{ .Site.Firebase }}
+{{ end }}
