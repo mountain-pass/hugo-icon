@@ -6,7 +6,7 @@
 			<p>{{ .message | markdownify }}</p>
 			{{ end }}
 		</div>
-		<form id="contactForm" name="contact-form" netlify-honeypot="_gotcha" action="thank-you" netlify>
+		<form id="contactForm" name="contact-form" action="thank-you">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
@@ -37,10 +37,10 @@
 			</div>
 			<div>
 				<div id="alert-success" class="alert alert-success" style="display: none">
-					<strong>Woohoo!</strong> We will get back to you asap
+					<strong>Success!</strong> We will get back to you as soon as possible.
 				</div>
 				<div id="alert-danger" class="alert alert-danger" style="display: none">
-					<strong>Errrr!</strong> Something's wrong!!!
+					<strong>Error!</strong> Something unexpected occurred. Please use an alternative contact method.
 				</div>
 			</div>
 		</form>
