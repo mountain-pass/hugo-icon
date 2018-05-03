@@ -6,12 +6,12 @@
       <p>{{ .message | markdownify }}</p>
       {{ end }}
     </div>
-    <form id="contactForm" name="contact-form" netlify-honeypot="_gotcha" action="thank-you" netlify>
+    <form id="contactForm" name="contact-form" action="thank-you">
       <div class="row">
 	<div class="col-md-6">
 	  <div class="form-group">
 	    <!-- <label for="inputName">First name</label> -->
-	    <input type="text" class="form-control" id="inputName" placeholder="Your name" name="_name" autocomplete='given-name name nickname'>
+	    <input type="text" class="form-control" id="inputName" placeholder="Your name" name="_name" autocomplete='name'>
 	  </div>
 	</div>
 	<div class="col-md-6">
